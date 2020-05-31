@@ -1,0 +1,549 @@
+
+<!-- saved from url=(0041)https://eproc.setadiran.ir/eproc/needs.do -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">
+    #tab {
+    direction: rtl;
+    clear: both;
+    padding-right: 5px;
+    font-family:Tahoma;
+}
+
+#tab div {
+    float: right;
+    background-color: #c1c1dd;
+    border: solid 1px black;
+    font-size: 11px;
+    margin-left: 4px;
+    cursor: pointer;
+    padding: 4px;
+    position: relative;
+    bottom: -1px;
+}
+
+#tab div a {
+    padding: 8px;
+    color: black;
+    font-style: normal;
+}
+
+#content {
+    clear: both;
+    margin-right: 5px;
+    margin-left: 5px;
+    background-color: #dddbdb;
+    border: solid 1px black;
+}
+
+#tab span {
+    float: right;
+    background-color: #dddbdb;
+    border-bottom: solid 1px #dddbdb;
+    border-right: solid 1px black;
+    border-left: solid 1px black;
+    border-top: solid 1px black;
+    font-size: 11px;
+    margin-left: 4px;
+    position: relative;
+    bottom: -1px;
+    padding: 4px;
+}
+
+    .coverAll{
+        width: 100%;
+        height: 100%;
+    }
+</style>
+<link rel="stylesheet" type="text/css" href="./needs_files/default.min.css">
+<script type="text/javascript" src="./needs_files/jquery.min.js"></script>
+<script type="text/javascript" src="./needs_files/general.min.js"></script>
+<script type="text/javascript" src="./needs_files/jquery.blockUI.min.js"></script>
+
+
+<script type="text/javascript">
+    function showPurchaseNeed(reqId,domainType,needId){
+        showPopUp('needDetailPopUp', 'needDetailsInfoModal-load.do?reqId='+reqId+'&domainType='+domainType+'&needId='+needId, 700, 400);
+    }
+    function closeNeedDetailPopUp()
+    {
+        hidePopUp('needDetailPopUp');
+    }
+    function showLogin()
+    {
+        this.parent.location = 'supplier.do?spring-security-redirect=home.do?method=login' ;
+    }
+    function showNeedAdvancedSearch()
+    {
+        this.parent.location = 'needAdvancedSearch.do' ;
+    }
+    function requestCaptchaVerifierShow()
+    {
+        this.parent.location = 'requestCaptchaVerifierShow.do' ;
+    }
+    $(document).ready(function()
+                      {
+                          if (null) {
+                              
+                              requestCaptchaVerifierShow();
+                          }
+                      });
+</script>
+</head><body><div id="tab">
+    <span>نياز هاي اعلان عمومي</span>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div id="needDetailPopUpDiv" style="display:none">
+    <iframe src="./needs_files/saved_resource.html" frameborder="0" style="width:700px;height:400px" id="needDetailPopUpFrame"></iframe>
+</div>
+<div id="content">
+    <html:form action="/needs">
+        <table height="80%" align="center" cellpadding="0" cellspacing="0" width="98%" dir="rtl">
+            <tbody><tr>
+                <td align="right" style="padding-top: 2px;vertical-align: top;">
+                    <div style="float: left;">
+                    <span>
+                    <a href="javascript:void(0)" onclick="showNeedAdvancedSearch()">
+                        جستجوي پيشرفته
+                    </a>
+                        </span>
+                    </div>
+                        <span class="pagebanner"> <bdo dir="rtl"> <bdo dir="ltr"> <span style="font-weight:bold;"> 3,409 </span> </bdo> <span style="font-weight:bold;"> <span style="font-weight:bold;">مورد</span></span> یافت شد, نمایش <bdo dir="ltr">1</bdo> تا <bdo dir="ltr">30</bdo>. </bdo></span><span class="pagelinks"> <bdo dir="rtl">[ <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=114">آخرین </a> / <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=2">بعد</a>] <bdo dir="ltr"><strong>1</strong>, <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=2" title="برو به صفحه 2">2</a>, <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=3" title="برو به صفحه 3">3</a>, <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=4" title="برو به صفحه 4">4</a>, <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=5" title="برو به صفحه 5">5</a>, <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=6" title="برو به صفحه 6">6</a>, <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=7" title="برو به صفحه 7">7</a>, <a class="pagelinks" href="https://eproc.setadiran.ir/eproc/needs.do?d-146909-p=8" title="برو به صفحه 8">8</a></bdo> [قبل / اولین]</bdo></span><br><br>
+<table style="direction: rtl;width: 100%" class="grid" id="aList">
+<thead>
+<tr>
+<th>رديف</th>
+<th>شماره نياز</th>
+<th>شرح کلي نياز</th>
+<th>نام دستگاه خريدار</th>
+<th>استان محل تحویل</th>
+<th>نوع نياز</th>
+<th>طبقه بندی موضوعی</th>
+<th>گروه کالا</th>
+<th>گروه خدمت</th>
+<th><a class="hyperlink" href="javascript:void(0)" onclick="javascript:postLink(&quot;needs.do?method=unspecified&amp;sort=1&amp;sortDirection=1&quot;)">تاريخ اعلام نیاز</a>&nbsp;<img src="./needs_files/desc.gif"></th>
+<th><a class="hyperlink" href="javascript:void(0)" onclick="javascript:postLink(&quot;needs.do?method=unspecified&amp;sort=2&amp;sortDirection=1&quot;)">مهلت ارسال پاسخ</a>&nbsp;</th>
+<th>تعداد پاسخ به نیاز</th></tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">۱</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114403,1431,951938)">۱۱۹۹۰۹۰۹۸۸۰۰۰۰۳۸</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="فریزر -40 °C آزمایشگاهی">فریزر -40 °C آزمایشگاهی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="دانشگاه علوم پزشکی تبریز-بیمارستان امام رضا (ع) تبریز">دانشگاه علوم پزشکی تبریز-بیمارستان امام رضا (ع) تبریز</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="آذربایجان شرقی">آذربایجان شرقی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="دارو، پزشکی و سلامت">دارو، پزشکی و سلامت</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۲۱ ساعت">۲ روز و  ۲۱ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۲</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114398,1432,951937)">۱۱۹۹۰۰۴۴۷۳۰۰۰۰۱۷</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="احیاء ومرمت قنوات طبق مدارک پیوست">احیاء ومرمت قنوات طبق مدارک پیوست</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="مدیریت جهاد کشاورزی شهرستان بردسکن">مدیریت جهاد کشاورزی شهرستان بردسکن</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="فعالیت‌های حرفه‌ای، علمی و فنی">فعالیت‌های حرفه‌ای، علمی و فنی</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۱۰ ساعت">۳ روز و  ۱۰ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۳</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114397,1432,951936)">۱۱۹۹۰۰۴۴۷۳۰۰۰۰۱۶</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="احیاءومرمت 4 رشته قنات طبق لیست پیوست">احیاءومرمت 4 رشته قنات طبق لیس...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="مدیریت جهاد کشاورزی شهرستان بردسکن">مدیریت جهاد کشاورزی شهرستان بردسکن</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="فعالیت‌های حرفه‌ای، علمی و فنی">فعالیت‌های حرفه‌ای، علمی و فنی</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۸ ساعت">۳ روز و  ۸ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۴</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114395,1432,951934)">۱۱۹۹۰۰۴۴۷۳۰۰۰۰۱۵</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="احیاء ومرمت 3 رشته قنوات طبق مدارک پیوست">احیاء ومرمت 3 رشته قنوات طبق م...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="مدیریت جهاد کشاورزی شهرستان بردسکن">مدیریت جهاد کشاورزی شهرستان بردسکن</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="فعالیت‌های حرفه‌ای، علمی و فنی">فعالیت‌های حرفه‌ای، علمی و فنی</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۱۲ ساعت">۲ روز و  ۱۲ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۵</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114394,1432,951932)">۱۱۹۹۰۹۰۹۷۳۰۰۰۰۰۵</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="نصب شیشه پیشخوان با توجه به جزییات در مدارک پیوستی">نصب شیشه پیشخوان با توجه به جز...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="مدیریت آموزش و پرورش شهرستان شهریار">مدیریت آموزش و پرورش شهرستان شهریار</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="تهران">تهران</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="ساختمان">ساختمان</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۱۴ ساعت">۲ روز و  ۱۴ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۶</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1112358,1432,950282)">۱۱۹۹۰۰۱۰۴۴۰۰۰۰۱۳</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="لکه گیری آسفالت محور پل فهلیان - نورآباد - قائمیه در شهرستان ممسنی">لکه گیری آسفالت محور پل فهلیان...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="اداره کل راهداری و حمل و نقل جاده ای استان فارس">اداره کل راهداری و حمل و نقل جاده ای استان فارس</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="فارس">فارس</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="حمل و نقل و انبارداری">حمل و نقل و انبارداری</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۲۲ ساعت">۲ روز و  ۲۲ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۷</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(0,1431,951930)">۱۲۹۹۰۰۳۸۱۰۰۰۰۰۸۱</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="تره بار مورد درخواست زندان مرکزی بندرعباس">تره بار مورد درخواست زندان مرک...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="اداره کل زندانها و اقدامات تامینی و تربیتی">اداره کل زندانها و اقدامات تامینی و تربیتی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="هرمزگان">هرمزگان</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب کالا">انتخاب کالا</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="مواد غذائی و نوشیدنی">مواد غذائی و نوشیدنی</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز">۳ روز</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۸</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114380,1431,951928)">۱۱۹۹۰۹۰۹۸۸۰۰۰۰۳۷</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="پست شریدر زباله ">پست شریدر زباله</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="دانشگاه علوم پزشکی تبریز-بیمارستان امام رضا (ع) تبریز">دانشگاه علوم پزشکی تبریز-بیمارستان امام رضا (ع) تبریز</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="آذربایجان شرقی">آذربایجان شرقی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="دارو، پزشکی و سلامت">دارو، پزشکی و سلامت</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۲۱ ساعت">۲ روز و  ۲۱ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۹</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114381,1431,951929)">۱۱۹۹۰۹۰۸۴۷۰۰۰۰۹۳</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="مصرفی پزشکی">مصرفی پزشکی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title=" شبکه بهداشت و درمان سرخس - علوم پزشکی مشهد"> شبکه بهداشت و درمان سرخس - علوم پزشکی مشهد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="دارو، پزشکی و سلامت">دارو، پزشکی و سلامت</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۹ ساعت">۲ روز و  ۹ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۱۰</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(0,1431,951927)">۱۲۹۹۰۰۴۲۱۷۰۰۰۰۰۴</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="میز اداری دوطرفه فلزی با رویه ملامینه استاندارد.">میز اداری دوطرفه فلزی با رویه ...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="نوسازی مدارس آذربایجانشرقی">نوسازی مدارس آذربایجانشرقی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="آذربایجان شرقی">آذربایجان شرقی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب کالا">انتخاب کالا</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="تجهیزات و وسایل تحصیلی واداری">تجهیزات و وسایل ت...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۹ ساعت">۲ روز و  ۹ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۱۱</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114379,1431,951926)">۱۱۹۹۰۹۰۸۴۷۰۰۰۰۹۲</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="مصرفی پزشکی">مصرفی پزشکی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title=" شبکه بهداشت و درمان سرخس - علوم پزشکی مشهد"> شبکه بهداشت و درمان سرخس - علوم پزشکی مشهد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="دارو، پزشکی و سلامت">دارو، پزشکی و سلامت</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۹ ساعت">۲ روز و  ۹ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۱۲</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(0,1431,951925)">۱۲۹۹۰۰۴۲۱۷۰۰۰۰۰۳</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="صندلی گردان اداری استاندارد با کیفیت بالا">صندلی گردان اداری استاندارد با...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="نوسازی مدارس آذربایجانشرقی">نوسازی مدارس آذربایجانشرقی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="آذربایجان شرقی">آذربایجان شرقی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب کالا">انتخاب کالا</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="تجهیزات و وسایل تحصیلی واداری">تجهیزات و وسایل ت...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۹ ساعت">۲ روز و  ۹ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۱۳</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114378,1431,951923)">۱۱۹۹۰۰۰۰۷۸۰۰۰۰۰۵</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="خرید لوازم یدکی خودروهای مدیریت بحران با توجه به لیست پیوست ارائه قیمت گردد.کدهای انتخاب شده مشابه میباشد.اولویت با بومی استان میباشد">خرید لوازم یدکی خودروهای مدیری...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="استانداری خراسان شمالی">استانداری خراسان شمالی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان شمالی">خراسان شمالی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="لوازم خودرو و ماشین آلات">لوازم خودرو و ماش...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۱۲ ساعت">۳ روز و  ۱۲ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۱۴</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114377,1431,951924)">۱۱۹۹۰۹۰۹۸۸۰۰۰۰۳۶</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="دستگاه امحاء زباله اتو کلاو 1000 لیتری فول اتوماتیک طبق نمونه">دستگاه امحاء زباله اتو کلاو 10...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="دانشگاه علوم پزشکی تبریز-بیمارستان امام رضا (ع) تبریز">دانشگاه علوم پزشکی تبریز-بیمارستان امام رضا (ع) تبریز</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="آذربایجان شرقی">آذربایجان شرقی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="آب رسانی؛ مدیریت پسماند، فاضلاب و فعالیت های تصفیه">آب رسانی؛ مدیریت ...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۲۱ ساعت">۲ روز و  ۲۱ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۱۵</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114373,1431,951921)">۱۱۹۹۰۶۰۰۳۷۰۰۰۰۲۳</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="ایران کد مشابه استفاده شده
+دستگاه ژل داک ساخت کمپانی Biorad آمریکا مدلXR PLUS
+در صورت موجود بودن مدل معتبر دیگر اعلام فرمائید
+">ایران کد مشابه استفاده شده
+دس...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="ابزارآلات اندازه گیری">ابزارآلات اندازه ...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۸ ساعت">۳ روز و  ۸ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۱۶</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114370,1431,951917)">۱۱۹۹۰۰۳۹۲۳۰۰۰۰۳۷</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="جهت اجرای خرید و نصب کفپوش ارایه قیمت یک متر مربع همراه با نصب 
+کفپوش وین فلکس ضخامت 2 میلیمتر همراه با نصب">جهت اجرای خرید و نصب کفپوش ارا...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="اداره کل بهزیستی کهگیلویه و بویراحمد">اداره کل بهزیستی کهگیلویه و بویراحمد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="تاسیسات و مصالح ساختمانی">تاسیسات و مصالح س...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۱۴ ساعت">۲ روز و  ۱۴ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۱۷</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114372,1432,951920)">۱۱۹۹۰۰۴۱۰۳۰۰۰۰۰۲</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="خدمات بهداشتی و درمانی طبق لیست پیوست (یکساله)">خدمات بهداشتی و درمانی طبق لیس...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="اداره زندان شهرستان سمنان">اداره زندان شهرستان سمنان</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="سمنان">سمنان</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="فعالیت‌های مربوط به سلامت انسان و مددکاری اجتماعی">فعالیت‌های مربوط به سلامت انسان و مددکاری اجتماعی</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۱۱ ساعت و  ۱۶ دقيقه">۱۱ ساعت و  ۱۶ دقيقه</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۱۸</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114371,1431,951918)">۱۱۹۹۰۹۱۴۵۸۰۰۰۰۰۴</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="ایران کد ثبت شده مشابه میباشد
+درخواست خرید آزمایشگاهی تعداد 5برگه به پیوست میباشد">ایران کد ثبت شده مشابه میباشد
+...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="شبکه بهداشت و درمان شهرستان رشتخوار - علوم پزشکی مشهد">شبکه بهداشت و درمان شهرستان رشتخوار - علوم پزشکی مشهد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="دارو، پزشکی و سلامت">دارو، پزشکی و سلامت</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۸ ساعت">۲ روز و  ۸ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۱۹</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(0,1431,951919)">۱۲۹۹۰۳۰۰۸۴۰۰۰۰۵۶</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="مهر ماسوره 63 و سه قلم دیگر طبق لیست پیوست">مهر ماسوره 63 و سه قلم دیگر طب...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="بیمارستان شهید رجایی گچساران">بیمارستان شهید رجایی گچساران</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب کالا">انتخاب کالا</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="امور تاسیساتی">امور تاسیساتی</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۱۰ ساعت و  ۱۶ دقيقه">۱۰ ساعت و  ۱۶ دقيقه</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۲۰</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114367,1431,951914)">۱۱۹۹۰۶۰۰۳۷۰۰۰۰۲۲</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="ایران کد مشابه انتخاب شده
+دستگاه درای بلاک دو خانه/ساخت کمپانیIKA
+اگر مارک معتبر و با کیفیت دیگری هم موجود بود اعلام بفرمائید">ایران کد مشابه انتخاب شده
+دست...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="تجهیزات و وسایل تحصیلی واداری">تجهیزات و وسایل ت...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۸ ساعت">۳ روز و  ۸ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۲۱</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(0,1431,951916)">۱۲۹۹۰۳۰۰۸۴۰۰۰۰۵۵</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="لوله سبز 63اینچ وچهار قلم دیگر طبق لیست پیوستی">لوله سبز 63اینچ وچهار قلم دیگر...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="بیمارستان شهید رجایی گچساران">بیمارستان شهید رجایی گچساران</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب کالا">انتخاب کالا</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="امور تاسیساتی">امور تاسیساتی</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۱۰ ساعت و  ۱۶ دقيقه">۱۰ ساعت و  ۱۶ دقيقه</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۲۲</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114368,1432,951915)">۱۱۹۹۰۹۱۰۷۸۰۰۰۰۰۵</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="نصب درب شیشه ای اتوماتیک ">نصب درب شیشه ای اتوماتیک</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="موسسه فرهنگی هنری آهنگ آتیه">موسسه فرهنگی هنری آهنگ آتیه</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="تهران">تهران</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="ساختمان">ساختمان</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۴ روز و  ۱۳ ساعت">۴ روز و  ۱۳ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۲۳</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114366,1431,951913)">۱۱۹۹۰۰۳۹۲۳۰۰۰۰۳۶</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="توجه: ایرانکد ثبت شده در سامانه فقط جهت ثبت مراحل  سامانه است  . ملاک خرید الزاماً شرایط پیوست سامانه میباشد.09179406033 جهت هماهنگی بیشتر">توجه: ایرانکد ثبت شده در سامان...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="اداره کل بهزیستی کهگیلویه و بویراحمد">اداره کل بهزیستی کهگیلویه و بویراحمد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="کهگیلویه و بویراحمد">کهگیلویه و بویراحمد</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="مواد غذائی و نوشیدنی">مواد غذائی و نوشیدنی</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۱۲ ساعت و  ۱۶ دقيقه">۱۲ ساعت و  ۱۶ دقيقه</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۲۴</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(0,1431,951912)">۱۲۹۹۰۰۳۵۲۳۰۰۰۱۵۵</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="ورق _ قوطی _ میلگرد">ورق _ قوطی _ میلگرد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="اداره کل زندانها و اقدامات تامینی و تربیتی">اداره کل زندانها و اقدامات تامینی و تربیتی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="البرز">البرز</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب کالا">انتخاب کالا</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="تاسیسات و مصالح ساختمانی">تاسیسات و مصالح س...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۱۲ ساعت">۲ روز و  ۱۲ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۲۵</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114364,1431,951911)">۱۱۹۹۰۶۰۰۳۷۰۰۰۰۲۱</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="ایران کد مشابه استفاده شده
+دستگاه اتو کلاو75 لیتری ساخت ایران
+مشخصات در پیوست">ایران کد مشابه استفاده شده
+دس...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="تجهیزات و وسایل تحصیلی واداری">تجهیزات و وسایل ت...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۸ ساعت">۳ روز و  ۸ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۲۶</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114354,1431,951901)">۱۱۹۹۰۶۰۰۳۷۰۰۰۰۲۰</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="ایران کد مشابه استفاده شده
+یک عدد اتو کلاو50لیتری ساخت ایران
+">ایران کد مشابه استفاده شده
+یک...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد">دانشگاه علوم پزشکی و خدمات بهداشتی درمانی گناباد</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان رضوی">خراسان رضوی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="تجهیزات و وسایل تحصیلی واداری">تجهیزات و وسایل ت...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۸ ساعت">۳ روز و  ۸ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۲۷</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114361,1431,951909)">۱۱۹۹۰۹۱۷۴۰۰۰۰۰۰۱</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="خرید دستگاه نبولایزر مدل 780uاز کد مشابه استفاده شده است">خرید دستگاه نبولایزر مدل 780uا...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="درمانگاه شهدای سوسنگرد استان خوزستان">درمانگاه شهدای سوسنگرد استان خوزستان</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خوزستان">خوزستان</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="دارو، پزشکی و سلامت">دارو، پزشکی و سلامت</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۱۲ ساعت">۲ روز و  ۱۲ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۲۸</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114363,1431,951908)">۱۱۹۹۰۰۰۰۱۶۰۰۰۰۰۶</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="الکل اتانول 70 درصد داری مجوز سازمان غذا و دارو 200 لیتر">الکل اتانول 70 درصد داری مجوز ...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="سازمان امور اراضی">سازمان امور اراضی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="تهران">تهران</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="دارو، پزشکی و سلامت">دارو، پزشکی و سلامت</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۸ ساعت">۲ روز و  ۸ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="odd">
+<td style="text-align: center;">۲۹</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114360,1431,951907)">۱۱۹۹۰۰۳۶۷۱۰۰۰۰۰۶</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="6 عدد کیس با 6 عدد مانیتور ایرانی برابر مشخصات پیوست">6 عدد کیس با 6 عدد مانیتور ایر...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="اداره کل زندانها و اقدامات تامینی و تربیتی خراسان جنوبی">اداره کل زندانها و اقدامات تامینی و تربیتی خراسان جنوبی</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="خراسان جنوبی">خراسان جنوبی</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">کالا</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="کامپیوتر و فناوری اطلاعات-نرم افزار">کامپیوتر و فناوری...</span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title=""></span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۲ روز و  ۱۰ ساعت">۲ روز و  ۱۰ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr>
+<tr class="even">
+<td style="text-align: center;">۳۰</td>
+<td style="text-align: center;width:120px"><a class="hyperlink" href="javascript:void(0)" onclick="javascript:showPurchaseNeed(1114326,1432,951880)">۱۱۹۹۰۹۱۰۷۸۰۰۰۰۰۴</a></td>
+<td style="text-align: right;width: 250px"><span dir="rtl" title="جابجایی اتاق سرور طبق لیست پیوست، ثبت پیش فاکتور و اعزام کارشناس جهت بازدید الزامی می باشد.">جابجایی اتاق سرور طبق لیست پیو...</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="موسسه فرهنگی هنری آهنگ آتیه">موسسه فرهنگی هنری آهنگ آتیه</span></td>
+<td style="text-align: right;width:190px"><span dir="rtl" title="تهران">تهران</span></td>
+<td style="text-align: center;width: 150px"><span dir="rtl" title="انتخاب تامین کننده">انتخاب تامین کننده</span></td>
+<td style="text-align: center;width: 110px">خدمات</td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="null"></span></td>
+<td style="text-align: right;width: 150px"><span dir="rtl" title="سایر فعالیت‌های خدماتی">سایر فعالیت‌های خدماتی</span></td>
+<td style="text-align: center;width: 76px"><span dir="ltr">۱۳۹۹/۰۲/۰۳</span></td>
+<td style="text-align: center;width:120px"><span dir="rtl" title="۳ روز و  ۱۳ ساعت">۳ روز و  ۱۳ ساعت</span></td>
+<td style="text-align: center;width: 70px"><span dir="ltr">کوچکتر مساوی 3</span></td></tr></tbody></table>
+                </td>
+            </tr>
+            <tr>
+            </tr>
+        </tbody></table>
+    </html:form>
+</div>
+</body></html>

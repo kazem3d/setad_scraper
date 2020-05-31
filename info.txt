@@ -1,0 +1,6 @@
+
+
+ DELETE FROM 'catched' WHERE rowid NOT IN (SELECT min(rowid) FROM 'catched' GROUP BY need_number);
+
+
+ DELETE FROM 'catched' WHERE need_number NOT IN (SELECT (need_number) FROM 'catched' GROUP BY need_number HAVING COUNT(need_number) > 1);
